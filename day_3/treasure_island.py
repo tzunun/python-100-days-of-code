@@ -74,6 +74,8 @@ def player_chooses(options: str, choice: str) -> str:
                 return "Burned by fire.  Game over."
             else:
                 return "Abducted by the dark side.  Game over."
+        case _:
+            return "Player unable to follow the instructions and rules. Game over."
 
 def check_game_status(status: str) -> None:
     print(status)
@@ -95,4 +97,3 @@ if __name__ == "__main__":
     direction = get_input('''You arrive at the chamber unharmed.  It has three doors. One red, one yellow and one blue, Which color do you choose?''')
     game_status = player_chooses("choose", direction)
     check_game_status(game_status)
-    
