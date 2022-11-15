@@ -31,11 +31,11 @@ def generate_password(number_of_letters: int, number_of_symbols: int, number_of_
     letters_length = len(letters)-1
 
     password = []
-    for i in range(1, number_of_numbers+1):
+    for _ in range(1, number_of_numbers+1):
         password.append(numbers[randint(0,numbers_length)])
-    for i in range(1, number_of_symbols+1):
+    for _ in range(1, number_of_symbols+1):
         password.append(symbols[randint(0,symbols_length)])
-    for i in range(1, number_of_letters+1):
+    for _ in range(1, number_of_letters+1):
         password.append(letters[randint(0,letters_length)])
 
     shuffle(password)
